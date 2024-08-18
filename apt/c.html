@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des .deb</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        #total {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="total">Nombre total de tweaks : <span id="count">0</span></div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nom du fichier</th>
+            </tr>
+        </thead>
+        <tbody id="deb-list">
+        </tbody>
+    </table>
+
+    <script>
+        async function fetchDebFiles() {
+            try {
+                const response = await fetch('http://leovza.fr/apt/debs/');
+                const text = await response.text();
+
+                // Extraire les fichiers .deb de la page
+                const debFiles = [...text.matchAll(/href="([^"]+\.deb)"/g)].map(match => match[1]);
+
+                // Afficher le nombre total
+                document.getElementById('count').textContent = debFiles.length;
+
+                // Afficher les fichiers dans le tableau
+                const debList = document.getElementById('deb-list');
+                debList.innerHTML = debFiles.map(file => `
+                    <tr>
+                        <td><a href="http://leovza.fr/apt/debs/${file}" download>${file}</a></td>
+                    </tr>
+                `).join('');
+
+            } catch (error) {
+                console.error('Erreur lors de la récupération des fichiers .deb:', error);
+            }
+        }
+
+        // Charger les fichiers lors du chargement de la page
+        window.onload = fetchDebFiles;
+    </script>
+
+</body>
+</html>
+
