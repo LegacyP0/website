@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carte sur place</title> <!-- Titre dans l'onglet -->
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .pdf-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pdf-viewer {
+        width: 80%;
+        height: 80%;
+        border: 1px solid #ccc;
+    }
+    .ios-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #007AFF;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<a class="ios-button" href="place.pdf" target="_blank">Ouvrir sur iOS</a>
+<div class="pdf-container">
+    <embed class="pdf-viewer" src="place.pdf" type="application/pdf" />
+</div>
+</body>
+</html>
