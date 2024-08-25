@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compatibilité des Apps iOS 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Fond noir */
+            color: #fff; /* Texte blanc pour la lisibilité */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: url('https://mtmdev.org/webapp/images/banner.png') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            font-size: 24px; /* Taille plus petite pour compatibilité */
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1c1c1c; /* Fond gris foncé pour contraster avec le noir */
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+            border-radius: 12px; /* Coins arrondis pour le conteneur */
+        }
+        .app-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .app-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #444; /* Bordure gris foncé */
+            background-color: #2c2c2c; /* Fond gris légèrement plus clair */
+            border-radius: 8px; /* Coins arrondis pour chaque élément */
+            transition: background-color 0.3s, box-shadow 0.3s; /* Transition douce pour le survol */
+            margin-bottom: 10px; /* Espacement entre les éléments */
+        }
+        .app-item:hover {
+            background-color: #3c3c3c; /* Fond plus clair au survol */
+            box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.3); /* Ombre plus marquée au survol */
+        }
+        .app-logo {
+            width: 60px; /* Légèrement plus grand pour une meilleure visibilité */
+            height: 60px;
+            border-radius: 12px; /* Coins arrondis pour le logo */
+            margin-right: 20px; /* Espacement entre le logo et les détails */
+        }
+        .app-details {
+            flex-grow: 1;
+        }
+        .app-name {
+            font-size: 20px; /* Taille du texte augmentée pour plus de visibilité */
+            margin: 0;
+        }
+        .app-name a {
+            text-decoration: none;
+            color: #1e90ff; /* Bleu clair pour les liens */
+            transition: color 0.3s; /* Transition douce pour la couleur des liens */
+        }
+        .app-name a:hover {
+            color: #87ceeb; /* Bleu plus clair au survol du lien */
+        }
+        .app-status {
+            margin-top: 5px;
+            font-size: 14px;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .functional {
+            background-color: #4CAF50; /* Vert pour fonctionnel */
+        }
+        .non-functional {
+            background-color: #f44336; /* Rouge pour non fonctionnel */
+        }
+    </style>
+</head>
+<body>
+
+    <header>Compatibilité des Apps sur iOS 6</header>
+
+    <div class="container">
+        <ul class="app-list">
+            <!-- App 1 -->
+            <li class="app-item">
+                <img src="https://mtmdev.org/ipa-content/Flappy_Bird-v1.2.png" alt="Logo App 1" class="app-logo">
+                <div class="app-details">
+                    <p class="app-name"><a href="flappy_bird.html">Flappy Bird</a></p>
+                    <span class="app-status functional">Fonctionnel</span>
+                </div>
+            </li>
+
+            <!-- App 2 -->
+            <li class="app-item">
+                <img src="https://mtmdev.org/ipa-content/Flappy_Bird-v1.2.png" alt="Logo App 2" class="app-logo">
+                <div class="app-details">
+                    <p class="app-name"><a href="angry_birds.html">Angry Birds</a></p>
+                    <span class="app-status non-functional">Non Fonctionnel</span>
+                </div>
+            </li>
+
+            <!-- App 3 -->
+            <li class="app-item">
+                <img src="https://mtmdev.org/ipa-content/Flappy_Bird-v1.2.png" alt="Logo App 3" class="app-logo">
+                <div class="app-details">
+                    <p class="app-name"><a href="whatsapp.html">WhatsApp</a></p>
+                    <span class="app-status functional">Fonctionnel</span>
+                </div>
+            </li>
+
+            <!-- App 4 -->
+            <li class="app-item">
+                <img src="https://mtmdev.org/ipa-content/Flappy_Bird-v1.2.png" alt="Logo App 4" class="app-logo">
+                <div class="app-details">
+                    <p class="app-name"><a href="instagram.html">Instagram</a></p>
+                    <span class="app-status non-functional">Non Fonctionnel</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
