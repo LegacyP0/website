@@ -1,28 +1,62 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.7">
-  <style type="text/css">
-    body {background-color: #65ae5a}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px Arial; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Arial; -webkit-text-stroke: #000000}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.4px Arial; -webkit-text-stroke: #000000}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.4px Arial; -webkit-text-stroke: #000000; min-height: 16.0px}
-    span.s1 {font-kerning: none; background-color: #ffffff}
-    span.s2 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Da Leone</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('back.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+            color: white;
+        }æ
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;wææ a
+        }
+        .btn {ææ
+            display: inline-block;
+            background-color: black; /* Couleur des boutons en noir */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #333; /* Couleur au survol */
+        }
+
+        /* Media query pour redimensionner pour les téléphones */
+        @media (max-width: 768px) {
+            .btn {
+                display: block;
+                margin: 10px auto;
+            }
+        }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1"><b>FERMETURE JUILLET-AOUT</b></span></p>
-<p class="p2"><span class="s1">Da Leone</span></p>
-<p class="p3"><span class="s1">La Pizzeria Da Leone ferme ses portes du Lundi 1er Juillet jusqu’au Vendredi 23 Août inclus.<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s2"></span><br></p>
-<p class="p3"><span class="s1">Merci pour cette année,</span></p>
-<p class="p3"><span class="s1">Pour toute demande de réservation / Evenementiel le numéro de la Pizzeria reste actif.</span></p>
-<p class="p3"><span class="s1">Merci.</span></p>
+    <div class="container">
+        <h1>Pizzeria Da Leone</h1>
+        <a href="tel:+33786977239" class="btn">Téléphone</a>
+        <a href="/daleone/surplace.html" class="btn">Sur Place</a> <!-- Correction du lien -->
+        <a href="emp.html" class="btn">A Emporter</a>
+    </div>
 </body>
 </html>
